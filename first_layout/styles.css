@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.trans {
+    color: rgba(0, 0, 0, 0.5);
+}
+/*----------------------------------*/
+.page {
+    margin: 15px 40px 0px 40px;
+    border: 1px solid LightGrey;
+    border-bottom: none;
+}
+
+.menu > :first-child {
+    border-bottom: 2px solid black;
+}
+
+.menu {
+    border-bottom: 1px solid LightGrey;
+}
+
+.menu > div {
+    display: inline-block;
+    margin: 20px 20px 0px 20px;
+    padding-bottom: 20px;
+}
+
+.content {
+    width: 500px;
+}
+
+.content, .menu > :first-child, header > :nth-child(2) {
+    margin-left: 20%;
+}
+/*----------------------------------*/
+header {
+    height: 60px;
+    border-bottom: 1px solid LightGrey;
+}
+
+header > :nth-child(1) {
+    position: fixed;
+}
+
+header > :nth-child(2) {
+    position: relative;
+}
+
+header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header > :nth-child(3) {
+    position: absolute;
+    width: 50px;
+    right: 57px;
+}
+
+header > div > img,
+.reply > :nth-child(1) {
+    border-radius: 50%;
+    width: 50px;
+}
+/*----------------------------------*/
+.org {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.org > * {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.org > img {
+    width: 20px;
+}
+
+.org > p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.org-menu > div {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid LightGrey;
+}
+
+.org-menu > :nth-child(4) {
+    background: Khaki;
+}
+
+.menu-item {
+    cursor: pointer;
+}
+/*----------------------------------*/
+.mark {
+    position: relative;
+    text-align: center;
+    width: 50px;
+}
+
+.mark > img/*, .replies, .replies-list*/ {
+    width: 100%;
+}
+
+.mark-value {
+    position: absolute;
+    left: 13px;
+    bottom: 8px;
+}
+/*----------------------------------*/
+.reply > :nth-child(3) {
+    width: 20px;
+}
+
+.reply > *, .total-replies > * {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.view-all-replies {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+    height: 80px;
+}
+
+.total-replies {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.total-replies p {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.total-replies > * {
+    vertical-align: top;
+}
+
+.my-reply > input {
+    width: 100%;
+    height: 80px;
+}
+/*----------------------------------*/
+.logo {
+    position: absolute;
+    font-size: 26px;
+    margin-left: 20px;
+}
+
+.search input {
+    height: 31px;
+    width: 300px;
+    font-size: 15px;
+    text-indent: 10px;
+}
+/*----------------------------------*/
+.btn {
+    padding: 5px 10px;
+}
+
+.search-btn, .btn {
+    border: 1px solid lightgrey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    border-radius: 2px;
+    margin-right: 15px;
+    background-color: white;
+    text-align: center;
+}
+
+.publish-btn {
+    margin-left: 350px;
+    border: none;
+    padding: 13px 26px;
+    background-color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+.search-btn {
+    margin-left: -2px;
+    padding: 9px 15px;
+}
+/*----------------------------------*/
