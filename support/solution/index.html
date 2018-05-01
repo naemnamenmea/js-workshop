@@ -1,0 +1,573 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        .typo {
+            color: #333;
+            font-family: 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .page {
+            border: 1px #eaeaea solid;
+
+            min-width: 480px;
+        }
+
+        .header {
+            display: table;
+
+            width: 100%;
+
+            height: 75px;
+
+            border-bottom: 1px #eaeaea solid;
+        }
+
+        .header-logo {
+            display: table-cell;
+
+            font: 0/0 a;
+
+            padding-left: 13px;
+            width: 217px;
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        .logo-yandex {
+            height: 30px;
+            width: 76px;
+            margin-right: 6px;
+
+            background: url(img/yandex.svg);
+
+            /* Визуально */
+            background-position-y: -15px;
+            background-size: 108%;
+        }
+
+        .logo-sprav {
+            height: 30px;
+            width: 115px;
+
+            background: url(img/sprav.png);
+            background-size: cover;
+        }
+
+        .header-login {
+            display: table-cell;
+
+            vertical-align: middle;
+            text-align: right;
+        }
+
+        .avatar {
+            display: inline-block;
+
+            border: 1px solid white;
+            border-radius: 100%;
+
+            overflow: hidden;
+        }
+
+        .avatar,
+        .avatar > img {
+            width: 42px;
+            height: 42px;
+        }
+
+        .header-section {
+            display: table-cell;
+
+            height: 30px;
+
+            vertical-align: middle;
+        }
+
+        .header-search-form {
+            display: inline-block;
+            overflow: hidden;
+
+            margin-top: -4px;
+
+            font: 0/0 a;
+
+            border: 1px solid #eaeaea;
+            border-radius: 4px;
+        }
+
+        .search-input {
+            height: 30px;
+            width: 390px;
+            padding-left: 12px;
+
+            font-size: 15px;
+
+            border: none;
+            border-right: 1px solid #eaeaea;
+        }
+
+        .search-btn {
+            height: 30px;
+            padding: 0 13px;
+
+            font-size: 15px;
+
+            border: none;
+
+            background: none;
+        }
+
+        .subheader {
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .main-menu {
+            height: 57px;
+        }
+
+        .container {
+            max-width: 936px;
+        }
+
+        .grid {
+            width: 482px;
+            margin: auto;
+        }
+
+        .main-menu-items {
+            font: 0/0 a;
+        }
+
+        .main-menu-items > li {
+            display: inline-block;
+
+            font-size: 12.5px;
+            line-height: 55px;
+
+            height: 55px;
+        }
+
+        .main-menu-items > li.active {
+            border-bottom: 2px solid #333;
+        }
+
+        .main-menu-items > li + li {
+            margin-left: 40px;
+        }
+
+        .main-menu-items > li > a {
+            color: #333;
+
+            text-decoration: none;
+        }
+
+        .reviews-header {
+            margin-top: 22px;
+        }
+
+        .review-title {
+            font-size: 35px;
+            font-weight: 400;
+        }
+
+        .review-subtitle {
+            font-size: 13px;
+        }
+
+        .review-subtitle > a {
+            text-decoration: none;
+        }
+
+        .icon-map {
+            display: inline-block;
+
+            width: 11px;
+            height: 13px;
+
+            background: url('img/placeholder.svg');
+            background-size: cover;
+        }
+
+        .org-menu {
+            margin-top: 27px;
+
+            border: 1px solid #eaeaea;
+            border-radius: 4px;
+        }
+
+        .org-menu > ul {
+            font: 0/0 a;
+
+            list-style-type: none;
+
+            white-space: nowrap;
+        }
+
+        .org-menu > ul > li {
+            display: inline-block;
+
+            height: 26px;
+
+            line-height: 26px;
+        }
+
+        .org-menu > ul > li + li {
+            border-left: 1px solid #eaeaea;
+        }
+
+        .org-menu > ul > li.active {
+            background: #ffee9a;
+        }
+
+        .org-menu > ul > li > a {
+            display: block;
+
+            font-size: 12.5px;
+
+            height: 100%;
+            padding: 0 21px;
+
+            text-decoration: none;
+            color:inherit;
+        }
+
+        .reviews-feed {
+            margin-top: 29px;
+        }
+
+        .reviews-count {
+            display: inline-block;
+
+            font-weight: 400;
+            font-size: 23px;
+        }
+
+        .rating {
+            position: relative;
+            top: -2px;
+
+            margin-left: 23px;
+            padding: 3px 3px 3px 8px;
+
+            font-size: 15px;
+
+            background: #ffd300;
+        }
+
+        .rating:after {
+            display: block;
+
+            content: '';
+
+            width: 0;
+            height: 0;
+
+            border-top: 13px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 9px solid #ffd300;
+
+            position: absolute;
+
+            right: -9px;
+            top: 0px;
+        }
+
+        .review {
+            margin-top: 26px;
+        }
+
+        .review-header {
+            font: 0/0 a;
+        }
+
+        .review-header-item {
+            display: inline-block;
+
+            font-size: 12px;
+
+            color: #bcbcbc;
+
+            height: 31px;
+
+            line-height: 31px;
+            vertical-align: middle;
+        }
+
+        .review-header-item + .review-header-item:before {
+            content: '·';
+
+            margin: 0 5px;
+        }
+
+        .username {
+            color: #333;
+        }
+
+        .username .avatar {
+            height: 31px;
+            width: 31px;
+            margin-right: 8px;
+
+            float: left;
+        }
+
+        .rating-icon {
+            display: inline-block;
+
+            width: 20px;
+            height: 20px;
+        }
+
+        .icon-thumbs-up {
+            background: url(img/thumb-up.svg);
+            background-size: cover;
+        }
+
+        .icon-thumbs-down {
+            background: url(img/thumb-down.svg);
+            background-size: cover;
+        }
+
+
+        .review-content {
+            margin-top: 6px;
+
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .read-more {
+            color: #a396bf;
+            text-decoration: none;
+        }
+
+        .review-panel {
+            margin-top: 10px;
+
+            font: 0/0 a;
+        }
+
+        .review-answer-btn {
+            padding: 3px 10px;
+
+            font-size: 13px;
+
+            background: none;
+
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .review-answer-btn + .review-answer-btn {
+            margin-left: 17px;
+        }
+
+        .review-answer-btn.active {
+            background: #ffee9a;
+        }
+
+        .ghost-btn {
+            padding: 0;
+
+            font-size: 11.5px;
+            color: #a396bf;
+
+            border: none;
+        }
+
+        .review + .review {
+            margin-top: 30px;
+        }
+
+        .review-editor {
+            position: relative;
+
+            margin-top: 11px;
+        }
+
+        .review-editor-title {
+            font-size: 13px;
+
+            margin-bottom: 10px;
+        }
+
+        .review-input {
+            width: 100%;
+            height: 100px;
+
+            resize: none;
+        }
+
+        .review-send-btn {
+            float: right;
+
+            padding: 5px 15px;
+            margin-top: 10px;
+
+            background: #ededed;
+
+            font-size: 14px;
+            color: #787878;
+
+            border: 1px #ededed solid;
+            border-radius: 3px;
+        }
+
+        .reviews-all-btn {
+            width: 100%;
+            height: 40px;
+            margin-top: 28px;
+
+            font-size: 15px;
+
+            background: #F2F1ED;
+
+            border: 1px #F2F1ED solid;
+            border-radius: 3px;
+        }
+
+        .review-editor:after {
+            content: '';
+
+            position: absolute;
+            right: 9px;
+            top: 35px;
+
+            width: 14px;
+            height: 14px;
+
+            background: url(img/clear.svg);
+            background-size: cover;
+        }
+
+        @media all and (max-width: 740px) {
+            .header-search {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="page">
+    <header class="header">
+        <section class="header-section header-logo">
+            <h3 class="logo logo-yandex"></h3>
+            <h3 class="logo logo-sprav"></h3>
+        </section>
+        <section class="header-section header-search">
+            <div class="header-search-form">
+                <input class="search-input" placeholder="Название, телефон, сайт">
+                <button class="search-btn">Найти</button>
+            </div>
+        </section>
+            <section class="header-login">
+            <span class="avatar">
+                <img src="img/avatar-user.jpg">
+            </span>
+        </section>
+    </header>
+    <aside class="subheader">
+        <nav class="main-menu container">
+            <ul class="main-menu-items grid">
+                <li class="active typo">
+                    <a href="#">Мои организации</a>
+                </li>
+                <li class="typo">
+                    <a href="#">Заявки на изменения</a>
+                </li>
+                <li class="typo">
+                    <a href="#">Мои заказы</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="container">
+        <section class="reviews grid">
+            <header class="reviews-header">
+                <h1 class="review-title">Кафе Гладиатор <small class="review-subtitle"><a href="#"><i class="icon-map"></i> Страница на картах</small></a></h1>
+                <nav class="org-menu">
+                    <ul>
+                        <li class="typo"><a href="#">Информация</a></li>
+                        <li class="typo"><a href="#">Услуги</a></li>
+                        <li class="typo"><a href="#">Фото</a></li>
+                        <li class="typo active"><a href="#">Отзывы</a></li>
+                        <li class="typo"><a href="#">Статистика</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="reviews-feed">
+                <h2 class="reviews-count">12 отзывов об организации</h2><label class="rating">9.8</label>
+                <article class="review">
+                    <header class="review-header">
+                        <h5 class="username review-header-item typo"><img src="img/avatar-1.jpg" class="avatar">Василий Привалов</h5>
+                        <time class="review-header-item typo">4 апреля 2016</time>
+                        <label class="review-rating review-header-item typo">оценка: <i class="rating-icon icon-thumbs-up"></i></label>
+                    </header>
+                    <p class="review-content">
+                        Очень давно знаю это место буквально со дня открытия и для нашей семьи в особенности ребенка, оно стало самым любимым. Здесь рай не только для взрослых по части вкусной итальянской кухни и романтики
+                        <a class="read-more" href="#">читать полностью</a>
+                    </p>
+                    <footer class="review-panel">
+                        <button class="review-answer-btn">Ответить</button>
+                        <button class="review-answer-btn">Пожаловаться</button>
+                        <button class="review-answer-btn ghost-btn">Ссылка на отзыв</button>
+                    </footer>
+                </article>
+                <article class="review">
+                    <header class="review-header">
+                        <h5 class="username review-header-item typo"><img src="img/avatar-2.jpg" class="avatar">Илья Пряников</h5>
+                        <time class="review-header-item typo">9 мая 2016</time>
+                        <label class="review-rating review-header-item typo">оценка: <i class="rating-icon icon-thumbs-up"></i></label>
+                    </header>
+                    <p class="review-content">
+                        Удивительное, хорошее место. Кухня на высоте. Интерьер крайне приятный, играет рояль каждый раз и для деток проводят мастер-классы. На радость родителям — бесплатно!
+                    </p>
+                    <footer class="review-panel">
+                        <button class="review-answer-btn">Ответить</button>
+                        <button class="review-answer-btn">Пожаловаться</button>
+                        <button class="review-answer-btn ghost-btn">Ссылка на отзыв</button>
+                    </footer>
+                </article>
+                <article class="review">
+                    <header class="review-header">
+                        <h5 class="username review-header-item typo"><img src="img/avatar-3.jpg" class="avatar">Лидия Никарагуа</h5>
+                        <time class="review-header-item typo">23 октября 2016</time>
+                        <label class="review-rating review-header-item typo">оценка:
+                            <i class="rating-icon icon-thumbs-down"></i>
+                        </label>
+                    </header>
+                    <p class="review-content">
+                        Не понравилось. На Белорусской и Пролетарской как то поуютнее, обстановка поприятнее. Маленький выбор пива, а цена на него
+                        большая. Лёффе 0.33 290р!!! Не очень понравилась еда. Брали фирменные бургеры. Мясо было пересоленное и переперченное. Плюс
+                        какое то слишком жирное. В итоге, просуммировав все, считаю, что при нынешнем уровне качества заведения цены на еду и напитки
+                        должны быть ниже.
+                    </p>
+                    <footer class="review-panel">
+                        <button class="review-answer-btn active">Ответить</button>
+                        <button class="review-answer-btn">Пожаловаться</button>
+                        <button class="review-answer-btn ghost-btn">Ссылка на отзыв</button>
+                    </footer>
+                </article>
+            </div>
+            <footer class="reviews-footer">
+                <div class="review-editor">
+                    <h5 class="review-editor-title">Напишите ответ на отзыв</h5>
+                    <textarea class="review-input"></textarea>
+                    <button class="review-send-btn">Опубликовать</button>
+                </div>
+                <button class="reviews-all-btn">Все 134 отзывов</button>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the number</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- https://gist.github.com/k-gun/c2ea7c49edf7b757fe9561ba37cb19ca -->
+    <script type="text/javascript" src="https://rawgit.com/k-gun/c2ea7c49edf7b757fe9561ba37cb19ca/raw/129c0f5f589d5e53aea3ff92856f5daae4617e37/Element.prototype.classList.js"></script>
+</head>
+<body>
+    <div class="main">
+        <header>Guess the number</header>
+        <div>
+            <div class="quantity-block">
+                <input class="quantity-num limits" type="number" name="a" placeholder="Upper limit">
+                <input class="quantity-num limits" type="number" name="b" placeholder="Lower limit">
+                <input class="quantity-num input hide" type="number" name="input">
+                <div class="score hide"></div>
+            </div>
+            <div>
+                <button class="btn btn-start">Start game</button>
+            </div>
+            <div class="info hide"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
