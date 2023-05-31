@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = () =>
+        {
+            if(xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                alert('Hooray!')
+            }
+            else
+            {
+                alert('Bad((')
+            }
+        }
+        xmlhttp.open('GET', 'https://stackoverflow.com/questions/4229043/load-page-content-to-variable', false)
+        xmlhttp.send()
+    </script>
+</body>
+</html>

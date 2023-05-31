@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Passwords</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="my-data.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+		table .c {
+			color: red;
+		}
+
+		.a .c {
+			color: green;
+		}
+	</style>
+</head>
+
+<body>
+	<table id="t">
+		<tr>
+			<td class="c">Текст</td>
+		</tr>
+	</table>
+	<div class="search-box">
+		<input list="rs-CategoryList" id="rs-CategoryInput" placeholder="Тема поиска">
+		<datalist id="rs-CategoryList"></datalist>
+
+		<input list="rs-ItemList" id="rs-ItemInput" placeholder="Выберите сервис">
+		<datalist id="rs-ItemList"></datalist>
+	</div>
+	<div id="data"></div>
+	<!-- <div id="field"></div> -->
+	<!-- <div id="field2"> -->
+	<!-- <div id="circle"></div> -->
+	<!-- </div> -->
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="my-data.js"></script>
+</body>
+
+</html>
